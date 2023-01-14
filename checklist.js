@@ -1,36 +1,35 @@
 let usertext;
 const listarray = []; 
 
+        function addToList(){
+
+            const numTodo = listarray.length;
+            console.log(numTodo);
+
+            const todoButton = document.createElement("input");
+                todoButton.type="checkbox";
+                todoButton.id="listCheckbox";
+
+            const todoDel = document.createElement("button");
+                todoDel.innerText="Delete";
+
+            const todoDiv = document.createElement("div");
+            
+            const todoContent = document.createTextNode(listarray[numTodo - 1]);
+
+            todoDiv.appendChild(todoButton);
+            todoDiv.appendChild(todoContent);
+            todoDiv.appendChild(todoDel);
+
+
+            const currentDiv = document.getElementById("todo-container");
+
+            currentDiv.appendChild(todoDiv);
+        }
 
 document.getElementById("addButton").onclick = function(){
 
     usertext = document.getElementById("addText").value;
-
-   //for (i = 0; i < listarray.length; i++) {
-   //     console.log(listarray[i])
-   //}
-
-    function addToList(){
-
-        const numTodo = listarray.length;
-        console.log(numTodo);
-
-        const todoButton = document.createElement("input");
-        todoButton.type="checkbox";
-        todoButton.id="listCheckbox";
-        const todoDiv = document.createElement("div");
-        
-
-        const todoContent = document.createTextNode(listarray[numTodo - 1]);
-
-        todoDiv.appendChild(todoButton);
-        todoDiv.appendChild(todoContent);
-    
-
-        const currentDiv = document.getElementById("todo-container");
-
-        currentDiv.appendChild(todoDiv);
-    }
 
    if(usertext.length != 0){
 
@@ -50,12 +49,6 @@ document.getElementById("addButton").onclick = function(){
 
    }
 
-   if(document.getElementById("listCheckbox").checked){
-        console.log("checkbox is checked");
-    }
-    else{
-        console.log("checkbox is NOT checked");
-    }
 }
 
 
