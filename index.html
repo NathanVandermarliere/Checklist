@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Checklist</title>
-        <link rel="stylesheet" href="styles/general.css">
-        <link rel="stylesheet" href="styles/header.css">
-        <link rel="stylesheet" href="styles/list.css">
-        <link rel="stylesheet" href="styles/footer.css">
+  <head>
+    <title>Checklist</title>
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/list.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <header>Checklist</header>
+  <body>
+    <header>Checklist</header>
 
-        <main>
-            <section class="typing-section">
-                    <input id="addText" class="text-box" type="text" placeholder="Insert text here">
-                    <button id="addButton" class="button-style" value="clear">ADD</button>
-            </section>
-            <hr class="red-line" color="#ff6666" size="2">
-            <section class="list-section">
-                <div id="todo-container" class="todo-container">
+    <main>
+      <section class="typing-section">
+        <input
+          id="inputText"
+          class="text-box"
+          type="text"
+          placeholder="Insert text here"
+        />
+        <button id="addButton" class="button-style" value="clear">ADD</button>
+      </section>
+      <hr class="red-line" color="#ff6666" size="2" />
+      <section class="list-section">
+        <ul id="todo-list"></ul>
+        <hr class="grey-line" color="#d9d9d9" size="1" />
+      </section>
+    </main>
 
-                </div>
-                <hr class="grey-line" color="#d9d9d9" size="1">
-            </section>
-        </main>
-
-        <footer>
-            <section class="bottom-section">
-                Copywrite shizzle
-            </section>
-        </footer>
-        <script src="checklist.js"></script>
-    </body>
+    <footer>
+      <section class="bottom-section">Copywrite shizzle</section>
+    </footer>
+    <script src="checklist.js"></script>
+  </body>
 </html>
